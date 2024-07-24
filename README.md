@@ -13,21 +13,45 @@ The process can be run online when needed, or a hybrid of both online and in per
 
 Quick and dirty description of the steps involved
 
-- Send an email to the group inviting them to take part in the process
-- Build out a form using Gravity Forms on a Wordpress site: [JSON](https://github.com/EMRL/brandcamp/blob/main/gf/json/gravityforms-export.json) 
-- After a certain time period, close the form and export the entries
-- Examine the spreadsheet of entries, and make sure you remove any extra columns that are not needed
-- Save the first 3 columns of personality traits to a new file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/example.csv)
-- Save the "More X than Y" statements to their own file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/comparison-example.csv)
-- Run `./bc.sh /path/to/file.csv` to process the personality traits file
-- Run `./bc.sh -c /path/to/file.csv` to process the comparison statements file
+ - [ ] Clone this repo on a machine running Linux, Windows Subsystem Linux, or macOS _(untested)_
+ - [ ] Build out a form using Gravity Forms on a Wordpress site: [JSON](https://github.com/EMRL/brandcamp/blob/main/gf/json/gravityforms-export.json)
+ - [ ] Send an email to the client/stakeholder group inviting them to take part in the process
+ - [ ] After a certain time period, close the form and export the entries
+ - [ ] Export the spreadsheet of entries, and make sure you remove any extra columns that are not needed
+ - [ ] Save the first 3 columns of personality traits to a new file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/example.csv)
+ - [ ] Save the "More X than Y" statements to their own file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/comparison-example.csv)
+ - [ ] Run `./bc.sh /path/to/file.csv` to process the personality traits file
+ - [ ] Run `./bc.sh -c /path/to/file.csv` to process the comparison statements file
+
+Example personality output:
+```
+$ ./bc.sh personality.csv
+Br&ndcamp version 0.1.0
+Processing personality.csv
+144 data points processed
+Saved to personality.processed_01.csv
+140 data points processed
+Saved to personality.processed_02.csv
+125 data points processed
+Saved to personality.processed_03.csv
+```
+Example personality output:
+```
+$ ./bc.sh -c comparison.csv
+Br&ndcamp version 0.1.0
+Processing comparison.csv
+120 data points processed
+Saved to comparison.processed.txt
+```
+
+At this point, jump to the **Interpreting the results** section below
 
 ## The big picture process
 
 The process consists of two parts: 
 
 ### Part 1:  Creating understanding
-Hopefully this can be done in person with smaller clients, larger/remote workforce clients will need to have this done through online forms.
+Hopefully this can be done in person with smaller clients, larger/remote workforce clients will need to have this done through online forms, using the process outlined above.
 
 **Post-it jam session**
 
@@ -63,7 +87,7 @@ The **more ______ than _______** component is likely gonna have some funny shit 
 The delivery deck should be designed so that a person the organization who was not part of the process could understand what they are looking at. Make sure it starts with a "Goal" statement slide. This can be a reusable, universal statement.
 
 ### Part 2: Rapid prototyping
-Needs big brain
+Needs big brain, TK
 
  - [ ] Make the client look cool
  - [ ] Send them an invoice
