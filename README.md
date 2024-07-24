@@ -18,7 +18,7 @@ Quick and dirty description of the steps involved
 - After a certain time period, close the form and export the entries
 - Examine the spreadsheet of entries, and make sure you remove any extra columns that are not needed
 - Save the first 3 columns of personality traits to a new file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/example.csv)
-- Save the "More X than Y" statements to their own file:[Example](https://github.com/EMRL/brandcamp/blob/main/gf/comparison-example.csv)
+- Save the "More X than Y" statements to their own file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/comparison-example.csv)
 - Run `./bc.sh /path/to/file.csv` to process the personality traits file
 - Run `./bc.sh -c /path/to/file.csv` to process the comparison statements file
 
