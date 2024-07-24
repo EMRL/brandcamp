@@ -87,12 +87,17 @@ function process() {
     rm /tmp/process.tmp
     
     # This is magically getting around a bug
-    strings /tmp/tr.tmp > "${bc_data}_${i}.csv"
+    strings /tmp/tr.tmp > /tmp/string.tmp
     rm /tmp/tr.tmp
     
     # Uppercase first letter
-    sed -i 's/^./\U&/' "${bc_data}_${i}.csv"
-    
+    sed -e 's/^./\U&/' /tmp/string.tmp > /tmp/sort.tmp
+    rm /tmp/string.tmp
+
+    # Alphabetically sort
+    sort /tmp/sort.tmp > "${bc_data}_${i}.csv"
+    rm /tmp/sort.tmp
+
     # Button things up
     sleep 2
     data_points="$(wc -l < ${bc_data}_${i}.csv)"
