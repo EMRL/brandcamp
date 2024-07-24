@@ -1,5 +1,5 @@
 
-# Br&camp
+# Br&ndcamp
 
 Brandcamp (not sure about this being the _actual_ name maybe it's just an informal one?) is a set of processes that create greater understanding of a developing or already-existing brand, quickly.
 
