@@ -7,7 +7,22 @@ While our main goal is creating clarity, our secondary goal is team building. Th
 
 At the end of Brandcamp, we should have a stronger team and a healthy amount of "buy in" from the key players.
 
-## Process
+The process can be run online when needed, or a hybrid of both online and in person.
+
+## Online process
+
+Quick and dirty description of the steps involved
+
+- Send an email to the group inviting them to take part in the process
+- Build out a form using Gravity Forms on a Wordpress site
+- After a certain time period, close the form and export the entries
+- Examine the spreadsheet of entries, and make sure you remove any extra columns that are not needed
+- Save the first 3 columns of personality traits to a new file
+- Save the "More X than Y" statements to their own file
+- Run `./bc.sh /path/to/file.csv` to process the personality traits file
+- Run `./bc.sh -c /path/to/file.csv` to process the comparison statements file
+
+## The big picture process
 
 The process consists of two parts: 
 
