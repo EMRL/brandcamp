@@ -14,11 +14,11 @@ The process can be run online when needed, or a hybrid of both online and in per
 Quick and dirty description of the steps involved
 
 - Send an email to the group inviting them to take part in the process
-- Build out a form using Gravity Forms on a Wordpress site
+- Build out a form using Gravity Forms on a Wordpress site: [JSON](https://github.com/EMRL/brandcamp/blob/main/gf/json/gravityforms-export.json) 
 - After a certain time period, close the form and export the entries
 - Examine the spreadsheet of entries, and make sure you remove any extra columns that are not needed
-- Save the first 3 columns of personality traits to a new file
-- Save the "More X than Y" statements to their own file
+- Save the first 3 columns of personality traits to a new file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/example.csv)
+- Save the "More X than Y" statements to their own file:[Example](https://github.com/EMRL/brandcamp/blob/main/gf/comparison-example.csv)
 - Run `./bc.sh /path/to/file.csv` to process the personality traits file
 - Run `./bc.sh -c /path/to/file.csv` to process the comparison statements file
 
