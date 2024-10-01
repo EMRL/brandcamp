@@ -29,7 +29,7 @@ Quick and dirty description of the steps involved
 
  - [ ] Clone this repo on a machine running Linux, Windows Subsystem Linux, or macOS _(untested)_
  - [ ] Build out a form using Gravity Forms on a Wordpress site: [JSON](https://github.com/EMRL/brandcamp/blob/main/gf/json/gravityforms-export.json)
- - [ ] Send an email to the client/stakeholder group inviting them to take part in the process
+ - [ ] Send an email to the client/stakeholder group inviting them to take part in the process (boilerplate template above)
  - [ ] After a certain time period, close the form and export the entries
  - [ ] Export the spreadsheet of entries, and make sure you remove any extra columns that are not needed
  - [ ] Save the first 3 columns of personality traits to a new file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/example.csv)
