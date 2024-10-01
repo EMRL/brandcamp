@@ -9,6 +9,20 @@ At the end of Brandcamp, we should have a stronger team and a healthy amount of 
 
 The process can be run online when needed, or a hybrid of both online and in person.
 
+## Boilerplate invite email
+
+We'd like your help getting up to speed with understanding your perception of yourselves as a company and those who benefit from what you do.
+
+You can help out by participating in a short online exercise that consists of answering a few questions, and it should take you just 15 minutes at most. By participating, you'll be helping us create more understanding around our brand, and where we want to take it in the future.
+
+Fill out the form individually without sharing your answers with each other so we can identify trends within our team.
+
+Spend as little or as much time on this effort as you like, every little bit helps. If you start the process but find you need more time, you can use the "Save for later" function and come back and finish it anytime.
+
+[Link](https://####)
+
+We would appreciate it if you could complete it by [Day], so our team can process the information quickly for our next meeting.
+
 ## Online process
 
 Quick and dirty description of the steps involved
