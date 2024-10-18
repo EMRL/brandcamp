@@ -49,9 +49,9 @@ Saved to personality.processed_02.csv
 125 data points processed
 Saved to personality.processed_03.csv
 ```
-Example personality output:
+Example comparison output (note the `--comparison` switch):
 ```
-$ ./bc.sh -c comparison.csv
+$ ./bc.sh --comparison comparison.csv
 Br&ndcamp version 0.1.0
 Processing comparison.csv
 120 data points processed
@@ -82,6 +82,10 @@ Hopefully this can be done in person with smaller clients, larger/remote workfor
  - [ ] Visualize as data
  - [ ] Summarize with statistics
  - [ ] Create wordbank derived from those themes that cross both organization and customer
+
+If you'd like to involve robot brains, feed the word group into ChatGPT using a prompt similar to this below:
+
+Group these words together if they are synonyms or thematically related, and label the groups with a personality trait most represented by the words in the group: [List of words]
 
 **Summary statistics example**
 
