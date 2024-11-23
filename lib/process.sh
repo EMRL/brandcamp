@@ -7,10 +7,12 @@
 # individual file
 ###############################################################################
 
-var=(bc_comparison bc_data data_points)
+var=(bc_comparison bc_data data_points total_data_points)
 init_loop
 
 function process() {
+
+  # Process comparison statements
   if [[ "${bc_comparison}" == "1" ]]; then 
     # Start working on comparison statements, .csv first
     cp "${bc_data}" /tmp/process.tmp
@@ -59,13 +61,19 @@ function process() {
   cp "${bc_data}" /tmp/process.tmp
   bc_data="${bc_data//.csv/.processed}"
 
+  # Assume each line (less headers) equals one participant
+  participants="$(wc -l < /tmp/process.tmp)"
+  participants=$((participants - 1))
+  info "${participants} particpants"
+
   # Extract column, this is horrible and I feel ashamed
   awk -F "\"*,\"*" '{print $1}' /tmp/process.tmp > "${bc_data}_01.csv"
   awk -F "\"*,\"*" '{print $2}' /tmp/process.tmp > "${bc_data}_02.csv"
   awk -F "\"*,\"*" '{print $3}' /tmp/process.tmp > "${bc_data}_03.csv"
+  awk -F "\"*,\"*" '{print $4}' /tmp/process.tmp > "${bc_data}_04.csv"
   rm /tmp/process.tmp
 
-  var=(01 02 03) 
+  var=(01 02 03 04) 
   for i in "${var[@]}" ; do
     # Substitute '|' for new line
     sed -i 's/|/\n/g' "${bc_data}_${i}.csv"
@@ -101,8 +109,10 @@ function process() {
     # Button things up
     sleep 2
     data_points="$(wc -l < ${bc_data}_${i}.csv)"
+    total_data_points=$((total_data_points + ${data_points}))
     info "${data_points} data points processed"
     info "Saved to ${bc_data}_${i}.csv"
   done
+  info "${total_data_points} total data points processed"
   sleep 5
 }
