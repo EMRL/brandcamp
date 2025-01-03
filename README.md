@@ -9,25 +9,63 @@ At the end of Brandcamp, we should have a stronger team and a healthy amount of 
 
 The process can be run online when needed, or a hybrid of both online and in person.
 
+## Boilerplate invite email
+
+We'd like your help getting up to speed with understanding your perception of yourselves as a company and those who benefit from what you do.
+
+You can help out by participating in a short online exercise that consists of answering a few questions, and it should take you just 15 minutes at most. By participating, you'll be helping us create more understanding around our brand, and where we want to take it in the future.
+
+Fill out the form individually without sharing your answers with each other so we can identify trends within our team.
+
+Spend as little or as much time on this effort as you like, every little bit helps. If you start the process but find you need more time, you can use the "Save for later" function and come back and finish it anytime.
+
+[Link](https://####)
+
+We would appreciate it if you could complete it by [Day], so our team can process the information quickly for our next meeting.
+
 ## Online process
 
 Quick and dirty description of the steps involved
 
-- Send an email to the group inviting them to take part in the process
-- Build out a form using Gravity Forms on a Wordpress site: [JSON](https://github.com/EMRL/brandcamp/blob/main/gf/json/gravityforms-export.json) 
-- After a certain time period, close the form and export the entries
-- Examine the spreadsheet of entries, and make sure you remove any extra columns that are not needed
-- Save the first 3 columns of personality traits to a new file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/example.csv)
-- Save the "More X than Y" statements to their own file:[Example](https://github.com/EMRL/brandcamp/blob/main/gf/comparison-example.csv)
-- Run `./bc.sh /path/to/file.csv` to process the personality traits file
-- Run `./bc.sh -c /path/to/file.csv` to process the comparison statements file
+ - [ ] Clone this repo on a machine running Linux, Windows Subsystem Linux, or macOS _(untested)_
+ - [ ] Build out a form using Gravity Forms on a Wordpress site: [JSON](https://github.com/EMRL/brandcamp/blob/main/gf/json/gravityforms-export.json)
+ - [ ] Send an email to the client/stakeholder group inviting them to take part in the process (boilerplate template above)
+ - [ ] After a certain time period, close the form and export the entries
+ - [ ] Export the spreadsheet of entries, and make sure you remove any extra columns that are not needed
+ - [ ] Save the first 3 columns of personality traits to a new file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/example.csv)
+ - [ ] Save the "More X than Y" statements to their own file: [Example](https://github.com/EMRL/brandcamp/blob/main/gf/comparison-example.csv)
+ - [ ] Run `./bc.sh /path/to/file.csv` to process the personality traits file
+ - [ ] Run `./bc.sh -c /path/to/file.csv` to process the comparison statements file
+
+Example personality output:
+```
+$ ./bc.sh personality.csv
+Br&ndcamp version 0.1.0
+Processing personality.csv
+144 data points processed
+Saved to personality.processed_01.csv
+140 data points processed
+Saved to personality.processed_02.csv
+125 data points processed
+Saved to personality.processed_03.csv
+```
+Example comparison output (note the `--comparison` switch):
+```
+$ ./bc.sh --comparison comparison.csv
+Br&ndcamp version 0.1.0
+Processing comparison.csv
+120 data points processed
+Saved to comparison.processed.txt
+```
+
+At this point, jump to the **Interpreting the results** section below
 
 ## The big picture process
 
 The process consists of two parts: 
 
 ### Part 1:  Creating understanding
-Hopefully this can be done in person with smaller clients, larger/remote workforce clients will need to have this done through online forms.
+Hopefully this can be done in person with smaller clients, larger/remote workforce clients will need to have this done through online forms, using the process outlined above.
 
 **Post-it jam session**
 
@@ -44,6 +82,10 @@ Hopefully this can be done in person with smaller clients, larger/remote workfor
  - [ ] Visualize as data
  - [ ] Summarize with statistics
  - [ ] Create wordbank derived from those themes that cross both organization and customer
+
+If you'd like to involve robot brains, feed the word group into ChatGPT using a prompt similar to this below:
+
+Group these words together if they are synonyms or thematically related, and label the groups with a personality trait most represented by the words in the group: [List of words]
 
 **Summary statistics example**
 
@@ -63,7 +105,7 @@ The **more ______ than _______** component is likely gonna have some funny shit 
 The delivery deck should be designed so that a person the organization who was not part of the process could understand what they are looking at. Make sure it starts with a "Goal" statement slide. This can be a reusable, universal statement.
 
 ### Part 2: Rapid prototyping
-Needs big brain
+Needs big brain, TK
 
  - [ ] Make the client look cool
  - [ ] Send them an invoice
