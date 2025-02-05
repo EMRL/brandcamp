@@ -64,16 +64,16 @@ function process() {
   # Assume each line (less headers) equals one participant
   participants="$(wc -l < /tmp/process.tmp)"
   participants=$((participants - 1))
-  info "${participants} particpants"
+  info "${participants} participants"
 
   # Extract column, this is horrible and I feel ashamed
   awk -F "\"*,\"*" '{print $1}' /tmp/process.tmp > "${bc_data}_01.csv"
   awk -F "\"*,\"*" '{print $2}' /tmp/process.tmp > "${bc_data}_02.csv"
   awk -F "\"*,\"*" '{print $3}' /tmp/process.tmp > "${bc_data}_03.csv"
-  awk -F "\"*,\"*" '{print $4}' /tmp/process.tmp > "${bc_data}_04.csv"
+  # awk -F "\"*,\"*" '{print $4}' /tmp/process.tmp > "${bc_data}_04.csv"
   rm /tmp/process.tmp
 
-  var=(01 02 03 04) 
+  var=(01 02 03) 
   for i in "${var[@]}" ; do
     # Substitute '|' for new line
     sed -i 's/|/\n/g' "${bc_data}_${i}.csv"
