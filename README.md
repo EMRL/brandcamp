@@ -21,7 +21,7 @@ Spend as little or as much time on this effort as you like, every little bit hel
 
 [Link](https://####)
 
-We would appreciate it if you could complete it by [Day], so our team can process the information quickly for our next meeting.
+We would appreciate it if you could complete it by [Day].
 
 ## Online process
 
